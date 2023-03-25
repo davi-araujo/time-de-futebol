@@ -1,0 +1,13 @@
+button {
+    background-color: #282C34;
+    color: #F6F6F6;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+button:active {
+    color: #282C34;
+}

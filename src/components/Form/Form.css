@@ -1,0 +1,12 @@
+.form {
+    margin: 64px auto;
+    width: 50%;
+    background-color: #F6F6F6;
+    padding: 32px;
+    border-radius: 8px;
+}
+
+.form h1 {
+    align-items: center;
+    text-align: center;
+}

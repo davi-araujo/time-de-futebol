@@ -1,0 +1,16 @@
+.card {
+    background-color: white;
+    width: 15%;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.card-header {
+    border-radius: 8px 8px 0 0;
+}
+
+.card-header img {
+    border-radius: 100%;
+    width: 100px;
+    margin: 32px;
+}

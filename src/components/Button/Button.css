@@ -1,4 +1,4 @@
-button {
+.create-button {
     background-color: #282C34;
     color: #F6F6F6;
     border: none;
@@ -8,6 +8,6 @@ button {
     margin: 16px 0;
 }
 
-button:active {
+.create-button:active {
     color: #282C34;
 }

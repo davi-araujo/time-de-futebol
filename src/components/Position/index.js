@@ -1,12 +1,20 @@
 import Card from '../Card';
+import hexToRgba from 'hex-to-rgba';
 import './Position.css';
 
-const Position = ({position, players}) => {
+const Position = ({position, players, deletePlayer}) => {
     return (
-        (players.length > 0) && <section className='position' style={{ backgroundColor: position.secondaryColor}}>
-            <h3 style={{ borderColor: position.primaryColor }}>{position.name}</h3>
+        (players.length > 0) && <section className='position' style={{ backgroundColor: hexToRgba(position.color, '0.6')}}>
+            <h3 style={{ borderColor: position.color }}>{position.name}</h3>
             <div className='cards'>
-                {players.map(item => <Card key={position.name} player={item} positionColor={position.primaryColor}/>)}
+                {players.map(item => 
+                    <Card 
+                        key={position.name} 
+                        player={item} 
+                        positionColor={position.color} 
+                        deletePlayer={deletePlayer}
+                    />
+                )}
             </div>
         </section>
     );

@@ -9,27 +9,29 @@ function App() {
   const positionList = [
     {
       name: "Goleiro",
-      primaryColor: "#93123B",
-      secondaryColor: "#a15a70"
+      color: "#B532BF",
     },
     {
       name: "Defensor",
-      primaryColor: "#D5282B",
-      secondaryColor: "#FF9496"
+      color: "#F5F109",
     },
     {
       name: "Meio-campista",
-      primaryColor: "#EE7323",
-      secondaryColor: "#FFD29D"
+      color: "#EE7323",
     },
     {
       name: "Atacante",
-      primaryColor: "#73BE45",
-      secondaryColor: "#C1E5AD"
+      color: "#73BE45",
     }
   ];
 
   const [players, setPlayers] = useState([]);
+
+  const delettingPlayers = (player) => {
+    setPlayers(players.filter(item => item !== player));
+  };
+
+  console.log(players)
 
   return (
     <div className="app">
@@ -43,6 +45,7 @@ function App() {
         key={itemPosition.name} 
         position={itemPosition} 
         players={players.filter(itemPlayer => itemPlayer.position === itemPosition.name)}
+        deletePlayer={delettingPlayers}
       />)}
     </div>
   );

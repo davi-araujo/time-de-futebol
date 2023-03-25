@@ -1,8 +1,14 @@
+import { TiDelete } from 'react-icons/ti';
 import './Card.css';
 
-const Card = ({player, positionColor}) => {
+const Card = ({player, positionColor, deletePlayer}) => {
+    const deletting = () => {
+        deletePlayer(player);
+    };
+
     return (
         <div className='card'>
+            <TiDelete size={18} onClick={deletting} className="delete-button"/>
             <div style={{ backgroundColor: positionColor }} className="card-header">
                 <img src={player.image} alt="Player"/>
             </div>

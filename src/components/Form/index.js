@@ -3,6 +3,7 @@ import TextField from '../TextField';
 import Button from '../Button';
 import './Form.css';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 function Form ({title,  newPlayer, list}) {
     const [name, setName] = useState('');
@@ -13,6 +14,7 @@ function Form ({title,  newPlayer, list}) {
     const Saving = (event) => {
         event.preventDefault();
         newPlayer({
+            id: uuidv4(),
             name,
             age,
             image,

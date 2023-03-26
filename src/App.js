@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Position from './components/Position';
@@ -27,8 +26,8 @@ function App() {
 
   const [players, setPlayers] = useState([]);
 
-  const delettingPlayers = (player) => {
-    setPlayers(players.filter(item => item !== player));
+  const delettingPlayers = (id) => {
+    setPlayers(players.filter(item => item.id !== id));
   };
 
   console.log(players)

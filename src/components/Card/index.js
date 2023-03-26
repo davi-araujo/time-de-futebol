@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = ({player, positionColor, deletePlayer}) => {
     const deletting = () => {
-        deletePlayer(player);
+        deletePlayer(player.id);
     };
 
     return (

@@ -9,7 +9,7 @@ const Position = ({position, players, deletePlayer}) => {
             <div className='cards'>
                 {players.map(item => 
                     <Card 
-                        key={position.name} 
+                        key={item.id} 
                         player={item} 
                         positionColor={position.color} 
                         deletePlayer={deletePlayer}

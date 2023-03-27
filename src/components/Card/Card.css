@@ -25,3 +25,8 @@
     width: 100px;
     margin: 32px;
 }
+
+.favorite {
+    border-radius: 100%;
+    padding: 5px;
+}

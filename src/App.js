@@ -30,7 +30,14 @@ function App() {
     setPlayers(players.filter(item => item.id !== id));
   };
 
-  console.log(players)
+  const favorittingPlayer = (id) => {
+    setPlayers(players.map(player => {
+      if (player.id === id) {
+        player.favorite = !player.favorite;
+      }
+      return player;
+    }));
+  };
 
   return (
     <div className="app">
@@ -45,6 +52,7 @@ function App() {
         position={itemPosition} 
         players={players.filter(itemPlayer => itemPlayer.position === itemPosition.name)}
         deletePlayer={delettingPlayers}
+        favorite={favorittingPlayer}
       />)}
     </div>
   );

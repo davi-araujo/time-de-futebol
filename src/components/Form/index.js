@@ -18,8 +18,9 @@ function Form ({title,  newPlayer, list}) {
             name,
             age,
             image,
-            position
-        })
+            position,
+            favorite: false,
+        });
         setImage('');
         setAge('');
         setName('');
